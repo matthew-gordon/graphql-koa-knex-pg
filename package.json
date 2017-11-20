@@ -1,0 +1,16 @@
+{
+  "name": "graphql-koa-apollo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "matthew-gordon <m.gordon5525@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-koa": "^1.2.0",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0"
+  }
+}

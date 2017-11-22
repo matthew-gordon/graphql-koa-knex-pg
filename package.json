@@ -9,11 +9,16 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-koa": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^4.0.0",
     "graphql": "^0.11.7",
+    "jsonwebtoken": "^8.1.0",
     "knex": "^0.14.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
+    "koa-jwt": "^3.2.2",
     "koa-router": "^7.3.0",
+    "moment": "^2.19.2",
     "pg": "^7.4.0"
   }
 }

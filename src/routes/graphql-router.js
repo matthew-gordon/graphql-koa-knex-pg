@@ -9,7 +9,7 @@ router.post('/graphql', graphqlKoa((ctx) => {
 
   return {
     schema: GraphQLSchema,
-    context: { user }
+    context: user ? { user } : {}
   }
 }))
 

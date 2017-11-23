@@ -1,6 +1,7 @@
 const graphql = require('graphql')
 const {
   GraphQLObjectType,
+  GraphQLID,
   GraphQLString,
   GraphQLInt
 } = graphql
@@ -8,7 +9,7 @@ const {
 const UserType = new GraphQLObjectType({
   name: 'UserType',
   fields: {
-    id: { type: GraphQLString },
+    id: { type: GraphQLID },
     username: { type: GraphQLString },
     email: { type: GraphQLString },
     token: { type: GraphQLString }

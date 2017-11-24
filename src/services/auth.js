@@ -44,5 +44,9 @@ module.exports = {
     } catch (err) {
       throw new Error(err.message)
     }
+  },
+
+  async logout(ctx) {
+    return ctx.user
   }
 }

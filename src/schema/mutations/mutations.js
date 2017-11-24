@@ -32,6 +32,12 @@ const mutation = new GraphQLObjectType({
         // if (!context.user) throw new Error('You must be authenticated to perform this request')
         return AuthService.login(args, context)
       }
+    },
+    logout: {
+      type: UserType,
+      resolve(parentValue, _, context) {
+        return AuthService.logout(context)
+      }
     }
   }
 })

@@ -29,7 +29,7 @@ const start = async () => {
   app.use(routes.allowedMethods())
   app.server = http.createServer(app.callback())
 
-  app.server.listen(PORT, () => {
+  await app.server.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`)
   })
 }

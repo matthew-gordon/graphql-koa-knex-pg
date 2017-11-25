@@ -16,8 +16,6 @@ module.exports = {
 
       delete payload.password
 
-      ctx.user = payload
-
       return payload
     } catch (err) {
       throw new Error(err.message)
@@ -30,15 +28,12 @@ module.exports = {
     try {
       // get user from DB with helper function
       const user = await getUser(username)
-
       // compare password to hash in DB
       const response = await comparePass(password, user.password)
       // generate token for authenticated user
-      const payload = generateJWTforUser(user)
+      const payload = await generateJWTforUser(user)
 
       delete payload.password
-
-      ctx.user = payload
 
       return payload
     } catch (err) {

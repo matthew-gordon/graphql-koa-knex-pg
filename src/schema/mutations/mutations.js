@@ -18,7 +18,6 @@ const mutation = new GraphQLObjectType({
         password: { type: GraphQLString }
       },
       resolve(parentValue, args, context) {
-        // if (!context.user) throw new Error('You must be authenticated to perform this request')
         return AuthService.register(args, context)
       }
     },
@@ -29,7 +28,6 @@ const mutation = new GraphQLObjectType({
         password: { type: GraphQLString }
       },
       resolve(parentValue, args, context) {
-        // if (!context.user) throw new Error('You must be authenticated to perform this request')
         return AuthService.login(args, context)
       }
     },
